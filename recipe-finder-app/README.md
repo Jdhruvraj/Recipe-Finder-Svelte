@@ -75,40 +75,6 @@ npm run build     # builds with @sveltejs/adapter-vercel
 npm run preview   # preview the production build locally
 ```
 
-## Deploy to Vercel
-
-The app is pre-configured with `@sveltejs/adapter-vercel`.
-
-1. Push the project to a Git repository (GitHub/GitLab/Bitbucket).
-2. Import the repository at [vercel.com/new](https://vercel.com/new).
-3. Set the **Root Directory** to `recipe-finder-app`.
-4. Vercel auto-detects SvelteKit — deploy.
-
-Or via the Vercel CLI:
-
-```bash
-npm i -g vercel
-cd recipe-finder-app
-vercel            # preview deploy
-vercel --prod     # production deploy
-```
-
-> **Replace this with your deployed URL after deploying:**
->
-> https://your-app.vercel.app
-
-## Stencil library
-
-The reusable StencilJS component library lives in `../recipe-ui-lib` and is published to npm.
-
-- **npm package:** https://www.npmjs.com/package/recipe-ui-lib _(replace with your published link)_
-- **Source:** `../recipe-ui-lib` (see its README for component API, props, events, and slots)
-
-## GitHub repository
-
-> **Replace this with your GitHub repository link:**
->
-> https://github.com/&lt;your-username&gt;/recipe-finder-meal-planner
 
 ## Project structure
 

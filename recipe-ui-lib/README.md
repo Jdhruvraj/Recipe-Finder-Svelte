@@ -91,15 +91,9 @@ npm login
 npm publish
 ```
 
-### Versioning
-
-Follows [semver](https://semver.org/). Current version: `0.1.0`. Bump with `npm version patch|minor|major` before publishing a new release.
-
 ## npm package
 
-> **Replace this with your published npm link after running `npm publish`:**
->
-> https://www.npmjs.com/package/recipe-ui-lib
+>https://www.npmjs.com/package/@ssj4kyuubi/recipe-ui-lib
 
 ## Project structure
 
