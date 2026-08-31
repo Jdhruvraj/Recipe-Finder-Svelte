@@ -1,0 +1,197 @@
+:host {
+  display: block;
+}
+
+.rui-detail {
+  background: var(--rui-color-bg);
+  border-radius: var(--rui-radius);
+  box-shadow: var(--rui-shadow-sm);
+  overflow: hidden;
+}
+
+.rui-detail__header {
+  display: grid;
+  grid-template-columns: 320px 1fr;
+  gap: 1.5rem;
+  padding: 1.5rem;
+}
+@media (max-width: 640px) {
+  .rui-detail__header {
+    grid-template-columns: 1fr;
+  }
+}
+
+.rui-detail__media {
+  aspect-ratio: 4 / 3;
+  background: var(--rui-color-bg-alt);
+  border-radius: var(--rui-radius);
+  overflow: hidden;
+}
+.rui-detail__media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+.rui-detail__placeholder {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--rui-color-muted);
+}
+
+.rui-detail__title {
+  margin: 0 0 0.35rem;
+  font-size: 1.6rem;
+  font-weight: 700;
+}
+.rui-detail__meta {
+  margin: 0 0 1rem;
+  color: var(--rui-color-muted);
+  font-size: 0.95rem;
+}
+
+.rui-detail__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+  align-items: center;
+}
+
+.rui-detail__fav,
+.rui-detail__plan {
+  font-family: var(--rui-font);
+  font-size: 0.9rem;
+  font-weight: 600;
+  padding: 0.5rem 0.9rem;
+  border-radius: var(--rui-radius);
+  border: 1px solid var(--rui-color-border);
+  background: var(--rui-color-bg);
+  cursor: pointer;
+  transition: background-color 0.15s ease, border-color 0.15s ease;
+}
+.rui-detail__fav:hover,
+.rui-detail__plan:hover {
+  border-color: var(--rui-color-primary);
+  background: var(--rui-color-primary-soft);
+}
+.rui-detail__fav.is-fav {
+  color: var(--rui-color-danger);
+  border-color: var(--rui-color-danger);
+  background: #fff5f5;
+}
+
+.rui-detail__section {
+  padding: 0 1.5rem 1.5rem;
+}
+.rui-detail__section h3 {
+  margin: 0 0 0.75rem;
+  font-size: 1.15rem;
+  font-weight: 700;
+  border-bottom: 2px solid var(--rui-color-primary-soft);
+  padding-bottom: 0.35rem;
+}
+
+.rui-detail__tables {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  align-items: start;
+}
+@media (max-width: 700px) {
+  .rui-detail__tables {
+    grid-template-columns: 1fr;
+  }
+}
+
+.rui-detail__table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.9rem;
+  background: var(--rui-color-bg, #ffffff);
+  border: 1px solid var(--rui-color-border, #dee2e6);
+  border-radius: var(--rui-radius, 8px);
+  overflow: hidden;
+}
+.rui-detail__table thead {
+  background: var(--rui-color-bg-alt, #f8f9fa);
+}
+.rui-detail__table th {
+  text-align: left;
+  padding: 0.6rem 0.75rem;
+  font-weight: 700;
+  font-size: 0.82rem;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  color: var(--rui-color-muted, #868e96);
+  border-bottom: 2px solid var(--rui-color-border, #dee2e6);
+}
+.rui-detail__table td {
+  padding: 0.55rem 0.75rem;
+  border-bottom: 1px solid var(--rui-color-border, #dee2e6);
+  vertical-align: middle;
+}
+.rui-detail__table tbody tr:last-child td {
+  border-bottom: none;
+}
+.rui-detail__table tbody tr:hover {
+  background: var(--rui-color-primary-soft, #dcfce7);
+}
+.rui-detail__td--index {
+  width: 36px;
+  text-align: center;
+  color: var(--rui-color-muted, #868e96);
+  font-weight: 600;
+}
+.rui-detail__ing-measure {
+  color: var(--rui-color-muted, #868e96);
+  white-space: nowrap;
+}
+.rui-detail__ing-name {
+  font-weight: 500;
+  color: var(--rui-color-text, #212529);
+}
+.rui-detail__empty {
+  color: var(--rui-color-muted, #868e96);
+  font-size: 0.9rem;
+  margin: 0.5rem 0 0;
+}
+
+/* keep old list styles for fallback if needed */
+.rui-detail__ingredients {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 0.4rem 1rem;
+}
+.rui-detail__ingredients li {
+  display: flex;
+  gap: 0.5rem;
+  font-size: 0.9rem;
+  padding: 0.3rem 0;
+  border-bottom: 1px dashed var(--rui-color-border, #dee2e6);
+}
+
+.rui-detail__instructions {
+  white-space: pre-line;
+  line-height: 1.6;
+  font-size: 0.95rem;
+  margin: 0;
+}
+
+.rui-detail__links {
+  display: flex;
+  gap: 1rem;
+}
+.rui-detail__links a {
+  color: var(--rui-color-secondary);
+  text-decoration: none;
+  font-weight: 500;
+}
+.rui-detail__links a:hover {
+  text-decoration: underline;
+}

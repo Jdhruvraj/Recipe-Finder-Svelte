@@ -1,0 +1,130 @@
+:host {
+  display: block;
+}
+
+.rui-planner {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 1rem;
+}
+
+.rui-planner__day {
+  background: var(--rui-color-bg);
+  border: 1px solid var(--rui-color-border);
+  border-radius: var(--rui-radius);
+  box-shadow: var(--rui-shadow-sm);
+  overflow: hidden;
+}
+
+.rui-planner__day-head {
+  padding: 0.6rem 0.85rem;
+  background: var(--rui-color-primary-soft);
+  border-bottom: 1px solid var(--rui-color-border);
+}
+.rui-planner__day-head h4 {
+  margin: 0;
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--rui-color-primary-hover);
+}
+
+.rui-planner__meal {
+  display: flex;
+  gap: 0.6rem;
+  padding: 0.75rem;
+  align-items: center;
+}
+.rui-planner__meal--clickable {
+  cursor: pointer;
+  transition: background-color 0.15s ease;
+  border-radius: var(--rui-radius);
+}
+.rui-planner__meal--clickable:hover {
+  background: var(--rui-color-primary-soft, #dcfce7);
+}
+.rui-planner__meal--clickable:focus-visible {
+  outline: 2px solid var(--rui-color-primary, #16a34a);
+  outline-offset: -2px;
+}
+.rui-planner__meal img {
+  width: 56px;
+  height: 56px;
+  border-radius: var(--rui-radius-sm);
+  object-fit: cover;
+  flex-shrink: 0;
+}
+.rui-planner__meal-info {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.15rem;
+}
+.rui-planner__meal-name {
+  font-size: 0.9rem;
+  font-weight: 600;
+  line-height: 1.3;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+.rui-planner__meal-cat {
+  font-size: 0.75rem;
+  color: var(--rui-color-muted);
+}
+.rui-planner__meal-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+.rui-planner__meal-actions button {
+  font-family: var(--rui-font);
+  font-size: 0.75rem;
+  padding: 0.25rem 0.5rem;
+  border-radius: var(--rui-radius-sm);
+  border: 1px solid var(--rui-color-border);
+  background: var(--rui-color-bg);
+  cursor: pointer;
+}
+.rui-planner__meal-actions button:hover {
+  border-color: var(--rui-color-primary);
+}
+.rui-planner__view {
+  color: var(--rui-color-primary-hover, #15803d);
+  font-weight: 600;
+}
+.rui-planner__view:hover {
+  background: var(--rui-color-primary, #16a34a) !important;
+  color: #fff !important;
+  border-color: var(--rui-color-primary, #16a34a) !important;
+}
+.rui-planner__clear:hover {
+  color: var(--rui-color-danger);
+  border-color: var(--rui-color-danger) !important;
+}
+
+.rui-planner__empty {
+  padding: 1rem 0.75rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.6rem;
+  color: var(--rui-color-muted);
+  font-size: 0.85rem;
+}
+.rui-planner__empty button {
+  font-family: var(--rui-font);
+  font-size: 0.8rem;
+  font-weight: 600;
+  padding: 0.4rem 0.8rem;
+  border-radius: var(--rui-radius);
+  border: 1px dashed var(--rui-color-border);
+  background: var(--rui-color-bg-alt);
+  color: var(--rui-color-primary-hover);
+  cursor: pointer;
+}
+.rui-planner__empty button:hover {
+  border-color: var(--rui-color-primary);
+  background: var(--rui-color-primary-soft);
+}

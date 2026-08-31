@@ -1,0 +1,33 @@
+# Dependencies
+node_modules/
+package-lock.json
+recipe-ui-lib/package-lock.json
+
+# Build outputs
+recipe-finder-app/.svelte-kit/
+recipe-finder-app/.vercel/
+recipe-finder-app/build/
+recipe-finder-app/vercel.json
+recipe-ui-lib/dist/
+recipe-ui-lib/.stencil/
+recipe-ui-lib/loader/
+recipe-ui-lib/*.tgz
+recipe-ui-lib/www/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Env
+.env
+.env.*
+!.env.example
+
+# IDE
+.vscode/
+.idea/
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*

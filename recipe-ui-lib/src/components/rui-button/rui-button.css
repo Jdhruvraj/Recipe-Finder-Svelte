@@ -1,0 +1,72 @@
+:host {
+  display: inline-block;
+}
+
+.rui-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5em;
+  font-family: var(--rui-font);
+  font-size: 0.95rem;
+  font-weight: 600;
+  padding: 0.55rem 1.1rem;
+  border-radius: var(--rui-radius);
+  border: 1px solid transparent;
+  cursor: pointer;
+  transition: background-color 0.15s ease, border-color 0.15s ease, opacity 0.15s ease;
+  line-height: 1.2;
+  user-select: none;
+}
+
+.rui-btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.rui-btn--primary {
+  background-color: var(--rui-color-primary);
+  color: #fff;
+}
+.rui-btn--primary:hover:not(:disabled) {
+  background-color: var(--rui-color-primary-hover);
+}
+
+.rui-btn--secondary {
+  background-color: var(--rui-color-secondary);
+  color: #fff;
+}
+.rui-btn--secondary:hover:not(:disabled) {
+  background-color: #14538a;
+}
+
+.rui-btn--danger {
+  background-color: var(--rui-color-danger);
+  color: #fff;
+}
+.rui-btn--danger:hover:not(:disabled) {
+  background-color: #a52323;
+}
+
+.rui-btn--ghost {
+  background-color: transparent;
+  color: var(--rui-color-text);
+  border-color: var(--rui-color-border);
+}
+.rui-btn--ghost:hover:not(:disabled) {
+  background-color: var(--rui-color-bg-alt);
+}
+
+.rui-btn__spinner {
+  width: 1em;
+  height: 1em;
+  border: 2px solid currentColor;
+  border-top-color: transparent;
+  border-radius: 50%;
+  animation: rui-spin 0.7s linear infinite;
+}
+
+@keyframes rui-spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
