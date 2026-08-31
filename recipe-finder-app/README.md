@@ -123,7 +123,6 @@ recipe-finder-app/
 3. **User-created recipes** are stored locally with ids prefixed `user-` so they never collide with TheMealDB ids. They appear alongside API recipes in search results (filtered by name), favorites, and the meal planner.
 4. **SSR is disabled** (`export const ssr = false` in `+layout.ts`) because the Stencil web components register only on the client and the app is data-driven from a public API + localStorage (both client-side concerns). This keeps hydration simple.
 5. **Svelte 5 runes** are used for all reactive state (`$state`, `$derived`, `$effect`) — no legacy stores.
-6. **npm publish &amp; Vercel deploy** are performed by the developer (credentials required); the codebase is fully prepared for both.
 
 ## Scripts
 
